@@ -398,7 +398,9 @@ Place an empty newline at the end of the file.
 (function(global) {
   // ...stuff...
 })(this);
+```
 
+```javascript
 // Good
 (function(global) {
   // ...stuff...
