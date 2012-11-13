@@ -28,24 +28,24 @@
 Use the literal syntax for object creation.
 
 ```javascript
-// bad
+// Bad
 var item = new Object();
 
-// good
+// Good
 var item = {};
 ```
 
 Don't use [reserved words](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Reserved_Words) as keys.
 
 ```javascript
-// bad
+// Bad
 var superman = {
   class: 'superhero',
   default: { clark: kent },
   private: true
 };
 
-// good
+// Good
 var superman = {
   klass: 'superman',
   defaults: { clark: kent },
@@ -60,10 +60,10 @@ var superman = {
 Use the literal syntax for array creation.
 
 ```javascript
-// bad
+// Bad
 var items = new Array();
 
-// good
+// Good
 var items = [];
 ```
 
@@ -74,12 +74,12 @@ var len = items.length,
     itemsCopy = [],
     i;
 
-// bad
+// Bad
 for (i = 0; i < len; i++) {
   itemsCopy.push(items[i])
 }
 
-// good
+// Good
 for (i = 0; i < len; i++) {
   itemsCopy[i] = items[i];
 }
@@ -92,20 +92,20 @@ for (i = 0; i < len; i++) {
 Use single quotes `''` for strings.
 
 ```javascript
-// bad
+// Bad
 var name = "Bob Parr";
 
-// good
+// Good
 var name = 'Bob Parr';
 ```
 
 Strings longer than 80 characters should be written across multiple lines using string concatenation.
 
 ```javascript
-// bad
+// Bad
 var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
-// bad
+// Bad
 var errorMessage = 'This is a super long error that \
 was thrown because of Batman. \
 When you stop to think about \
@@ -113,7 +113,7 @@ how Batman had anything to do \
 with this, you would get nowhere \
 fast.';
 
-// good
+// Good
 var errorMessage = 'This is a super long error that ' +
   'was thrown because of Batman.' +
   'When you stop to think about ' +
@@ -129,17 +129,17 @@ var errorMessage = 'This is a super long error that ' +
 Function expressions:
 
 ```javascript
-// anonymous function expression
+// Anonymous function expression
 var anonymous = function() {
   return true;
 };
 
-// named function expression
+// Named function expression
 var named = function named() {
   return true;
 };
 
-// immediately-invoked function expression (IIFE)
+// Immediately-invoked function expression (IIFE)
 (function() {
   console.log('Welcome to the Internet. Please follow me.');
 })();
@@ -148,14 +148,14 @@ var named = function named() {
 Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news.
 
 ```javascript
-// bad
+// Bad
 if (currentUser) {
   function test() {
     console.log('Nope.');
   }
 }
 
-// good
+// Good
 if (currentUser) {
   var test = function test() {
     console.log('Yup.');
@@ -170,22 +170,22 @@ if (currentUser) {
 Always use `var` to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that.
 
 ```javascript
-// bad
+// Bad
 superPower = new SuperPower();
 
-// good
+// Good
 var superPower = new SuperPower();
 ```
 
 Use one `var` declaration for multiple variables and declare each variable on a newline.
 
 ```javascript
-// bad
+// Bad
 var items = getItems();
 var goSportsteam = true;
 var drangonball = 'z';
 
-// good
+// Good
 var items = getItems(),
     goSportsTeam = true,
     drangonball = 'z';
@@ -194,7 +194,7 @@ var items = getItems(),
 Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting related issues.
 
 ```javascript
-// bad
+// Bad
 function() {
   test();
   console.log('doing stuff...');
@@ -210,7 +210,7 @@ function() {
   return name;
 }
 
-// good
+// Good
 function() {
   var name = getName();
 
@@ -242,32 +242,32 @@ Conditional expressions are evaluated using coercion with the `ToBoolean` method
 + **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
 
 ```javascript
-// when evaluating that an array has length
-// bad
+// When evaluating that an array has length
+// Bad
 if (array.length > 0) ...
 
-// good
+// Good
 if (array.length) ...
 
-// when evaluating that an array is empty
-// bad
+// When evaluating that an array is empty
+// Bad
 if (array.length === 0) ...
 
-// good
+// Good
 if (!array.length) ...
 
-// when evaluating that a string is not empty
-// bad
+// When evaluating that a string is not empty
+// Bad
 if (string !== '') ...
 
-// good
+// Good
 if (string) ...
 
-// when evaluating that a string is empty
-// bad
+// When evaluating that a string is empty
+// Bad
 if (string === '') ...
 
-// good
+// Good
 if (!string) ...
 ```
 
@@ -278,22 +278,22 @@ if (!string) ...
 Use braces with all multi-line blocks.
 
 ```javascript
-// bad
+// Bad
 if (test)
   return false;
 
-// good
+// Good
 if (test) return false;
 
-// good
+// Good
 if (test) {
   return false;
 }
 
-// bad
+// Bad
 function() { return false; }
 
-// good
+// Good
 function() {
   return false;
 }
@@ -306,27 +306,27 @@ function() {
 Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an emptyline before the comment.
 
 ```javascript
-// bad
-var active = true; // is current tab
+// Bad
+var active = true; // Is current tab
 
-// good
-// is current tab
+// Good
+// Is current tab
 var active = true;
 
-// bad
+// Bad
 function getType() {
   console.log('fetching type...');
-  // set the default type to 'no type'
+  // Set the default type to 'no type'
   var type = this._type || 'no type';
 
   return type;
 }
 
-// good
+// Good
 function getType() {
   console.log('fetching type...');
 
-  // set the default type to 'no type'
+  // Set the default type to 'no type'
   var type = this._type || 'no type';
 
   return type;
@@ -336,7 +336,7 @@ function getType() {
 Use `/** ... */` for multiline comments.
 
 ```javascript
-// bad
+// Bad
 // make() returns a new element
 // based on the passed in tag name
 function make(tag) {
@@ -346,7 +346,7 @@ function make(tag) {
   return element;
 }
 
-// good
+// Good
 /**
  * make() returns a new element
  * based on the passed in tag name
@@ -366,12 +366,12 @@ function make(tag) {
 Use soft tabs set to 2 spaces.
 
 ```javascript
-// bad
+// Bad
 function() {
 ∙∙∙∙var name;
 }
 
-// good
+// Good
 function() {
 ∙∙var name;
 }
@@ -380,12 +380,12 @@ function() {
 Place 1 space before the leading brace.
 
 ```javascript
-// bad
+// Bad
 function test(){
   console.log('test');
 }
 
-// good
+// Good
 function test() {
   console.log('test');
 }
@@ -394,12 +394,12 @@ function test() {
 Place an empty newline at the end of the file.
 
 ```javascript
-// bad
+// Bad
 (function(global) {
   // ...stuff...
 })(this);
 
-// good
+// Good
 (function(global) {
   // ...stuff...
 })(this);
@@ -413,17 +413,17 @@ Place an empty newline at the end of the file.
 **Nope.**
 
 ```javascript
-// bad
+// Bad
 var once
   , upon
   , aTime;
 
-// good
+// Good
 var once,
     upon,
     aTime;
 
-// bad
+// Bad
 var hero = {
     firstName: 'Bob'
   , lastName: 'Parr'
@@ -431,7 +431,7 @@ var hero = {
   , superPower: 'strength'
 };
 
-// good
+// Good
 var hero = {
   firstName: 'Bob',
   lastName: 'Parr',
@@ -447,13 +447,13 @@ var hero = {
 **Yup.**
 
 ```javascript
-// bad
+// Bad
 (function() {
   var name = 'Skywalker'
   return name
 })()
 
-// good
+// Good
 (function() {
   var name = 'Skywalker';
   return name;
@@ -467,12 +467,12 @@ var hero = {
 Avoid single letter names. Be descriptive with your naming.
 
 ```javascript
-// bad
+// Bad
 function q() {
   // ...stuff...
 }
 
-// good
+// Good
 function query() {
   // ...stuff...
 }
@@ -481,7 +481,7 @@ function query() {
 Use camelCase when naming objects, functions, and instances.
 
 ```javascript
-// bad
+// Bad
 var OBJEcttsssss = {};
 var this_is_my_object = {};
 var this-is-my-object = {};
@@ -490,7 +490,7 @@ var u = new user({
   name: 'Bob Parr'
 });
 
-// good
+// Good
 var thisIsMyObject = {};
 function thisIsMyFunction() {};
 var user = new User({
@@ -501,7 +501,7 @@ var user = new User({
 Use PascalCase when naming constructors or classes.
 
 ```javascript
-// bad
+// Bad
 function user(options) {
   this.name = options.name;
 }
@@ -510,7 +510,7 @@ var bad = new user({
   name: 'nope'
 });
 
-// good
+// Good
 function User(options) {
   this.name = options.name;
 }
@@ -523,11 +523,11 @@ var good = new User({
 Use a leading underscore `_` when naming private properties.
 
 ```javascript
-// bad
+// Bad
 this.__firstName__ = 'Panda';
 this.firstName_ = 'Panda';
 
-// good
+// Good
 this._firstName = 'Panda';
 ```
 
@@ -538,17 +538,17 @@ this._firstName = 'Panda';
 Prefix jQuery object variables with a `$`.
 
 ```javascript
-// bad
+// Bad
 var sidebar = $('.sidebar');
 
-// good
+// Good
 var $sidebar = $('.sidebar');
 ```
 
 Cache jQuery lookups.
 
 ```javascript
-// bad
+// Bad
 function setSidebar() {
   $('.sidebar').hide();
 
@@ -559,7 +559,7 @@ function setSidebar() {
   });
 }
 
-// good
+// Good
 function setSidebar() {
   var $sidebar = $('.sidebar');
 
@@ -576,16 +576,16 @@ function setSidebar() {
 Scope jQuery object queries with find. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/13)
 
 ```javascript
-// bad
+// Bad
 $('.sidebar ul').hide();
 
-// bad
+// Bad
 $('.sidebar > ul').hide();
 
-// bad
+// Bad
 $('.sidebar', 'ul').hide();
 
-// good
+// Good
 $('.sidebar').find('ul').hide();
 ```
 
