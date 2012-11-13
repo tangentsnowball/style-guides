@@ -11,11 +11,11 @@
 1. [Variables](#variables)
 1. [Conditional Evaluation](#conditional-evaluation)
 1. [Blocks](#blocks)
-1. [Comments](#comments)
 1. [Whitespace](#whitespace)
 1. [Leading Commas](#leading-commas)
 1. [Semicolons](#semicolons)
 1. [Naming Conventions](#naming-conventions)
+1. [Comments](#comments)
 1. [jQuery](#jquery)
 1. [Resources](#resources)
 1. [License](#license)
@@ -301,66 +301,6 @@ function() {
 
 **[[⬆]](#TOC)**
 
-## <a name='comments'>Comments</a>
-
-Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an emptyline before the comment.
-
-```javascript
-// Bad
-var active = true; // Is current tab
-
-// Good
-// Is current tab
-var active = true;
-
-// Bad
-function getType() {
-  console.log('fetching type...');
-  // Set the default type to 'no type'
-  var type = this._type || 'no type';
-
-  return type;
-}
-
-// Good
-function getType() {
-  console.log('fetching type...');
-
-  // Set the default type to 'no type'
-  var type = this._type || 'no type';
-
-  return type;
-}
-```
-
-Use `/** ... */` for multiline comments.
-
-```javascript
-// Bad
-// make() returns a new element
-// based on the passed in tag name
-function make(tag) {
-
-  // ...stuff...
-
-  return element;
-}
-
-// Good
-/**
- * make() returns a new element
- * based on the passed in tag name
- */
-function make(tag) {
-
-  // ...stuff...
-
-  return element;
-}
-```
-
-**[[⬆]](#TOC)**
-
 ## <a name='whitespace'>Whitespace</a>
 
 Use soft tabs set to 2 spaces.
@@ -531,6 +471,66 @@ this.firstName_ = 'Panda';
 
 // Good
 this._firstName = 'Panda';
+```
+
+**[[⬆]](#TOC)**
+
+## <a name='comments'>Comments</a>
+
+Use `//` for single line comments. Place single line comments on a newline above the subject of the comment. Put an emptyline before the comment.
+
+```javascript
+// Bad
+var active = true; // Is current tab
+
+// Good
+// Is current tab
+var active = true;
+
+// Bad
+function getType() {
+  console.log('fetching type...');
+  // Set the default type to 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+
+// Good
+function getType() {
+  console.log('fetching type...');
+
+  // Set the default type to 'no type'
+  var type = this._type || 'no type';
+
+  return type;
+}
+```
+
+Use `/** ... */` for multiline comments.
+
+```javascript
+// Bad
+// make() returns a new element
+// based on the passed in tag name
+function make(tag) {
+
+  // ...stuff...
+
+  return element;
+}
+
+// Good
+/**
+ * make() returns a new element
+ * based on the passed in tag name
+ */
+function make(tag) {
+
+  // ...stuff...
+
+  return element;
+}
 ```
 
 **[[⬆]](#TOC)**
