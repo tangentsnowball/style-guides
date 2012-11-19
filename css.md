@@ -5,7 +5,7 @@
 ## <a name='TOC'>Table of Contents</a>
 
 1. [Whitespace](#whitespace)
-1. [Format](#format)
+1. [Formatting](#formatting)
 1. [Declaration Order](#declaration-order)
 1. [Naming Conventions](#naming-conventions)
 1. [Comments](#comments)
@@ -64,15 +64,16 @@ Place an empty newline at the end of the file.
 
 **[[⬆]](#TOC)**
 
-## <a name='format'>Format</a>
+## <a name='formatting'>Formatting</a>
 
 The chosen code format ensures that code is: easy to read; easy to clearly comment; minimises the chance of accidentally introducing errors; and results in useful diffs and blames.
 
 + Use 1 selector per line in multi-selector rulesets
 + Use 1 declaration per line in a declaration block
 + Use lowercase and shorthand hex values
-+ Use double quotes `""` e.g. `input[type="checkbox"]`
++ Use single quotes `''` e.g. `input[type='checkbox']`
 + *Where allowed*, avoid specifying units for zero-values e.g. `margin: 0`
++ Omit leading '0's in values or lengths between -1 and 1.
 + Include a space after each comma in comma-separated property or function values
 + Include a semi-colon at the end of the last declaration in a declaration block
 + Place the closing brace of a ruleset in the same column as the first character of the ruleset
@@ -90,7 +91,7 @@ The chosen code format ensures that code is: easy to read; easy to clearly comme
   display: block;
   font-family: helvetica, arial, sans-serif;
   background: #fff;
-  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(#fff, rgba(0, 0, 0, .8));
 }
 
 .selector-a,
@@ -114,7 +115,7 @@ Declare structurally important properties prior to all others.
   bottom: 0;
   left: 0;
   z-index: 10;
-  
+
   /* Display and Box Model */
   display: inline-block;
   overflow: hidden;
@@ -123,7 +124,7 @@ Declare structurally important properties prior to all others.
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
-  
+
   /* Typography */
   font-family: sans-serif;
   font-size: 16px;
@@ -132,12 +133,12 @@ Declare structurally important properties prior to all others.
   vertical-align: baseline;
   white-space: nowrap;
   color: #333;
-  
+
   /* Other */
   background: #fff;
-  opacity: 0.75;
+  opacity: .75;
   cursor: default;
-  content: "";
+  content: '';
 }
 ```
 
@@ -194,6 +195,64 @@ Use ID and class names that are as short as possible but as long as necessary.
 }
 ```
 
+Separate words in ID and class names with a hyphen.
+
+```css
+/* Bad */
+.demoimage {
+  border: 1px solid #ccc;
+}
+
+.error_text {
+  color: #f00;
+}
+
+/* Good */
+.demo-image {
+  border: 1px solid #ccc;
+}
+
+.error-text {
+  color: #f00;
+}
+```
+
+Avoid qualifying ID and class names with type selectors.
+
+```css
+/* Bad */
+ul#example {
+  list-style: none;
+}
+
+div.error-block {
+  background: #fff0f0;
+}
+
+/* Good */
+#example {
+  list-style: none;
+}
+
+.error-block {
+  background: #fff0f0;
+}
+```
+
+All code should be lowercase: This applies to element names, attributes, attribute values, selectors, properties and property values.
+
+```css
+/* Bad */
+BODY {
+  margin: 0;
+}
+
+/* Good */
+body {
+  margin: 0;
+}
+```
+
 **[[⬆]](#TOC)**
 
 ## <a name='comments'>Comments</a>
@@ -212,7 +271,7 @@ Use ID and class names that are as short as possible but as long as necessary.
  * This is a longer description of the comment, describing the code in more
  * detail. Limit these lines to a maximum of 80 characters in length.
  */
- 
+
 /* Basic comment */
 ```
 
@@ -222,15 +281,15 @@ Use ID and class names that are as short as possible but as long as necessary.
 /* ==========================================================================
    Typography
    ========================================================================== */
-   
+
 p {
   margin: 0 0 20px;
   font-size: 16px;
 }
-   
+
 /* Headings
    ===================================== */
-   
+
 h1,
 h2,
 h3,
@@ -254,7 +313,10 @@ h6 {
 
 **Other Styleguides**
 
++ [GitHub CSS Style Guide](https://github.com/styleguide/css)
++ [Google HTML/CSS Style Guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
 + [Principles of Writing Consistent, Idiomatic CSS](https://github.com/necolas/idiomatic-css)
++ [Isobar Front-end Code Standards & Best Practices](http://isobar-idev.github.com/code-standards/#_css)
 
 **[[⬆]](#TOC)**
 
