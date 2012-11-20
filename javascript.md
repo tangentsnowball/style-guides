@@ -541,54 +541,34 @@ Prefix jQuery object variables with a `$`.
 
 ```javascript
 // Bad
-var sidebar = $('.sidebar');
+var container = $('#container');
 
 // Good
-var $sidebar = $('.sidebar');
+var $container = $('#container');
 ```
 
 Cache jQuery lookups.
 
 ```javascript
 // Bad
-function setSidebar() {
-  $('.sidebar').hide();
+function setContainer() {
+  $('#container').hide();
 
   // ...stuff...
 
-  $('.sidebar').css({
-    'background-color': 'pink'
-  });
+  $('#container').show();
 }
 
 // Good
-function setSidebar() {
-  var $sidebar = $('.sidebar');
+function setContainer() {
+  var $container = $('#container');
 
-  $sidebar.hide();
+  $container.hide();
 
   // ...stuff...
 
-  $sidebar.css({
-    'background-color': 'pink'
-  });
+  $container.show();
 }
-```
-
-Scope jQuery object queries with find. [jsPerf](http://jsperf.com/jquery-find-vs-context-sel/13)
-
-```javascript
-// Bad
-$('.sidebar ul').hide();
-
-// Bad
-$('.sidebar > ul').hide();
-
-// Bad
-$('.sidebar', 'ul').hide();
-
-// Good
-$('.sidebar').find('ul').hide();
 ```
 
 **[[⬆]](#TOC)**
@@ -612,6 +592,10 @@ $('.sidebar').find('ul').hide();
 + [Rebecca Murphey](http://rmurphey.com/)
 + [JavaScript, JavaScript...](http://javascriptweblog.wordpress.com/)
 + [Adequately Good](http://www.adequatelygood.com/)
+
+**Tutorials**
+
++ [30 Days to Learn jQuery](https://tutsplus.com/course/30-days-to-learn-jquery/)
 
 **Other Styleguides**
 
