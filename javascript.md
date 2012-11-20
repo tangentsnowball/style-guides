@@ -231,7 +231,7 @@ function() {
 
 ## <a name='conditional-evaluation'>Conditional Evaluation</a>
 
-Use `===` and `!==` over `==` and `!=`.  
+Use `===` and `!==` over `==` and `!=`.
 Conditional expressions are evaluated using coercion with the `ToBoolean` method and always follow these simple rules:
 
 + **Objects** evaluate to **true**
@@ -308,12 +308,12 @@ Use soft tabs set to 2 spaces.
 ```javascript
 // Bad
 function() {
-∙∙∙∙var name;
+....var name;
 }
 
 // Good
 function() {
-∙∙var name;
+..var name;
 }
 ```
 

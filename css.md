@@ -22,12 +22,12 @@ Use soft tabs set to 2 spaces.
 ```css
 /* Bad */
 .selector {
-∙∙∙∙display: block;
+....display: block;
 }
 
 /* Good */
 .selector {
-∙∙display: block;
+..display: block;
 }
 ```
 
@@ -134,7 +134,7 @@ Declare structurally important properties prior to all others.
   white-space: nowrap;
   color: #333;
 
-  /* Other */
+  /* Others */
   background: #fff;
   opacity: .75;
   cursor: default;

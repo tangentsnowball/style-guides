@@ -21,12 +21,12 @@ Use soft tabs set to 2 spaces.
 ```html
 <!-- Bad -->
 <ul>
-∙∙∙∙<li>Apples</li>
+....<li>Apples</li>
 </ul>
 
 <!-- Good -->
 <ul> {
-∙∙<li>Apples</li>
+..<li>Apples</li>
 </ul>
 ```
 
