@@ -71,7 +71,7 @@ The chosen code format ensures that code is: easy to read; easy to clearly comme
 + Use 1 selector per line in multi-selector rulesets
 + Use 1 declaration per line in a declaration block
 + Use lowercase and shorthand hex values
-+ Use single quotes `''` e.g. `input[type='checkbox']`
++ Use double quotes `""` e.g. `input[type="checkbox"]`
 + *Where allowed*, avoid specifying units for zero-values e.g. `margin: 0`
 + Omit leading '0's in values or lengths between -1 and 1.
 + Include a space after each comma in comma-separated property or function values
@@ -138,7 +138,7 @@ Declare structurally important properties prior to all others.
   background: #fff;
   opacity: .75;
   cursor: default;
-  content: '';
+  content: "";
 }
 ```
 
