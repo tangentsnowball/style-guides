@@ -54,7 +54,7 @@ Place an empty newline at the end of the file.
 The chosen code format encourages the use of existing, common, sensible patterns.
 
 + Always use lowercase tag and attribute names
-+ Use a new line for every block, list, or table element and indent every such child element
++ Write one discrete element per line
 + Use double quotes for attribute values `""` e.g. `<input type="text">`
 + Use valueless boolean attributes e.g. `checked` rather than `checked="checked"`
 + Omit the `type` attributes from `link` stylesheet, `style` and `script` elements
@@ -84,19 +84,17 @@ The chosen code format encourages the use of existing, common, sensible patterns
 
 ## <a name='attribute-order'>Attribute Order</a>
 
-HTML attributes should be listed in an order that reflects the fact that class names are the primary interface through which CSS and JavaScript select elements.
-
-1. `class`
 1. `id`
+1. `class`
 1. `data-*`
 1. Everything else
 
 ```html
 <!-- Bad -->
-<button type="button" data-toggle="button" id="button" class="btn">Toggle</button>
+<button type="button" data-toggle="button" class="btn" id="button">Toggle</button>
 
 <!-- Good -->
-<button class="btn" id="button" data-toggle="button" type="button">Toggle</button>
+<button id="button" class="btn" data-toggle="button" type="button">Toggle</button>
 ```
 
 **[[⬆]](#TOC)**
@@ -116,6 +114,8 @@ Naming is hard, but very important. It's a crucial part of the process of develo
 <!-- Good -->
 <div class="column-body is-scrollable"></div>
 ```
+
+For more information on naming conventions please view the [CSS style guide](https://github.com/nathanstaines/style-guides/blob/master/css.md#naming-conventions).
 
 **[[⬆]](#TOC)**
 
