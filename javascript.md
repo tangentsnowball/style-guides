@@ -210,6 +210,7 @@ function getProp(prop) {
 }
 
 var isJedi = getProp('jedi');
+```
 
 **[[⬆]](#TOC)**
 
