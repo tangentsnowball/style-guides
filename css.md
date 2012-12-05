@@ -73,7 +73,6 @@ The chosen code format ensures that code is: easy to read; easy to clearly comme
 + Use lowercase and shorthand hex values
 + Use double quotes `""` e.g. `input[type="checkbox"]`
 + *Where allowed*, avoid specifying units for zero-values e.g. `margin: 0`
-+ Omit leading '0's in values or lengths between -1 and 1.
 + Include a space after each comma in comma-separated property or function values
 + Include a semi-colon at the end of the last declaration in a declaration block
 + Place the closing brace of a ruleset in the same column as the first character of the ruleset
@@ -91,7 +90,7 @@ The chosen code format ensures that code is: easy to read; easy to clearly comme
   display: block;
   font-family: helvetica, arial, sans-serif;
   background: #fff;
-  background: linear-gradient(#fff, rgba(0, 0, 0, .8));
+  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 
 .selector-a,
@@ -118,6 +117,8 @@ Declare structurally important properties prior to all others.
 
   /* Display and Box Model */
   display: inline-block;
+  float: left;
+  clear: both;
   overflow: hidden;
   width: 100px;
   height: 100px;
@@ -135,8 +136,10 @@ Declare structurally important properties prior to all others.
   color: #333;
 
   /* Others */
+  outline: 0;
+  list-style: circle;
   background: #fff;
-  opacity: .75;
+  opacity: 0.75;
   cursor: default;
   content: "";
 }
