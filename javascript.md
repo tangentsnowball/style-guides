@@ -8,6 +8,7 @@
 1. [Arrays](#arrays)
 1. [Strings](#strings)
 1. [Functions](#functions)
+1. [Properties](#properties)
 1. [Variables](#variables)
 1. [Conditional Evaluation](#conditional-evaluation)
 1. [Blocks](#blocks)
@@ -162,6 +163,53 @@ if (currentUser) {
   };
 }
 ```
+
+Never name a parameter `arguments`, this will take precendence over the `arguments` object that is given to every function scope.
+
+```javascript
+// Bad
+function nope(name, options, arguments) {
+  // ...stuff...
+}
+
+// Good
+function yup(name, options, args) {
+  // ...stuff...
+}
+```
+
+**[[⬆]](#TOC)**
+
+## <a name='properties'>Properties</a>
+
+Use dot notation when accessing properties.
+
+```javascript
+var luke = {
+  jedi: true,
+  age: 28
+};
+
+// Bad
+var isJedi = luke['jedi'];
+
+// Good
+var isJedi = luke.jedi;
+```
+
+Use subscript notation `[]` when accessing properties with a variable.
+
+```javascript
+var luke = {
+  jedi: true,
+  age: 28
+};
+
+function getProp(prop) {
+  return luke[prop];
+}
+
+var isJedi = getProp('jedi');
 
 **[[⬆]](#TOC)**
 
