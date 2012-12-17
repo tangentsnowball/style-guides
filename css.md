@@ -317,6 +317,7 @@ h6 {
 **Other Styleguides**
 
 + [GitHub CSS Style Guide](https://github.com/styleguide/css)
++ [CSS Guidelines (csswizardry)](https://github.com/csswizardry/CSS-Guidelines)
 + [Google HTML/CSS Style Guide](http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml)
 + [Principles of Writing Consistent, Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 + [Isobar Front-end Code Standards & Best Practices](http://isobar-idev.github.com/code-standards/#_css)
