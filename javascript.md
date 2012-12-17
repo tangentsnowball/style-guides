@@ -68,7 +68,7 @@ var items = new Array();
 var items = [];
 ```
 
-For [performance reasons](http://jsperf.com/array-direct-assignment-vs-push/5) use direct assignment over Array#push.
+When you know the length of an array use direct assignment over Array#push. [jsPerf](http://jsperf.com/array-direct-assignment-vs-push/11)
 
 ```javascript
 var len = items.length,
@@ -330,9 +330,6 @@ Use braces with all multi-line blocks.
 // Bad
 if (test)
   return false;
-
-// Good
-if (test) return false;
 
 // Good
 if (test) {
