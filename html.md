@@ -16,17 +16,17 @@
 
 ## <a name='whitespace'>Whitespace</a>
 
-Use soft tabs set to 2 spaces.
+Use soft tabs set to 4 spaces.
 
 ```html
 <!-- Bad -->
 <ul>
-....<li>Apples</li>
+..<li>Apples</li>
 </ul>
 
 <!-- Good -->
 <ul> {
-..<li>Apples</li>
+....<li>Apples</li>
 </ul>
 ```
 
@@ -35,14 +35,14 @@ Place an empty newline at the end of the file.
 ```html
 <!-- Bad -->
 <ul>
-  <li>Oranges</li>
+    <li>Oranges</li>
 </ul>
 ```
 
 ```html
 <!-- Good -->
 <ul>
-  <li>Oranges</li>
+    <li>Oranges</li>
 </ul>
 
 ```
@@ -64,19 +64,19 @@ The chosen code format encourages the use of existing, common, sensible patterns
 ```html
 <!-- Bad -->
 <article class='tweet'>
-  <a href='path/to/profile'><img src='path/to/image.jpg' alt='' /></a><br />
-  [tweet text]<br /><button disabled='disabled'>Reply</button>
+    <a href='path/to/profile'><img src='path/to/image.jpg' alt='' /></a><br />
+    [tweet text]<br /><button disabled='disabled'>Reply</button>
 </article>
 
 <!-- Good -->
 <article class="tweet">
-  <a href="path/to/profile">
-    <img src="path/to/image.jpg" alt="">
-  </a>
+    <a href="path/to/profile">
+        <img src="path/to/image.jpg" alt="">
+    </a>
 
-  <p>[tweet text]</p>
+    <p>[tweet text]</p>
 
-  <button disabled>Reply</button>
+    <button disabled>Reply</button>
 </article>
 ```
 

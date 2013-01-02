@@ -17,17 +17,17 @@
 
 ## <a name='whitespace'>Whitespace</a>
 
-Use soft tabs set to 2 spaces.
+Use soft tabs set to 4 spaces.
 
 ```css
 /* Bad */
 .selector {
-....display: block;
+..display: block;
 }
 
 /* Good */
 .selector {
-..display: block;
+....display: block;
 }
 ```
 
@@ -36,12 +36,12 @@ Place 1 space before the leading brace and place 1 space after the colon of a de
 ```css
 /* Bad */
 .selector{
-  float:left;
+    float:left;
 }
 
 /* Good */
 .selector {
-  float: left;
+    float: left;
 }
 ```
 
@@ -50,14 +50,14 @@ Place an empty newline at the end of the file.
 ```css
 /* Bad */
 .selector {
-  clear: both;
+    clear: both;
 }
 ```
 
 ```css
 /* Good */
 .selector {
-  clear: both;
+    clear: both;
 }
 
 ```
@@ -87,15 +87,15 @@ The chosen code format ensures that code is: easy to read; easy to clearly comme
 .selector-1,
 .selector-2,
 .selector-3 {
-  display: block;
-  font-family: helvetica, arial, sans-serif;
-  background: #fff;
-  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+    display: block;
+    font-family: helvetica, arial, sans-serif;
+    background: #fff;
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 
 .selector-a,
 .selector-b {
-  padding: 10px;
+    padding: 10px;
 }
 ```
 
@@ -107,41 +107,41 @@ Declare structurally important properties prior to all others.
 
 ```css
 .selector {
-  /* Positioning */
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
 
-  /* Display and Box Model */
-  display: inline-block;
-  float: left;
-  clear: both;
-  overflow: hidden;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
+    /* Display and Box Model */
+    display: inline-block;
+    float: left;
+    clear: both;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
 
-  /* Typography */
-  font-family: sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: right;
-  vertical-align: baseline;
-  white-space: nowrap;
-  color: #333;
+    /* Typography */
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    vertical-align: baseline;
+    white-space: nowrap;
+    color: #333;
 
-  /* Others */
-  outline: 0;
-  list-style: circle;
-  background: #fff;
-  opacity: 0.75;
-  cursor: default;
-  content: "";
+    /* Others */
+    outline: 0;
+    list-style: circle;
+    background: #fff;
+    opacity: 0.75;
+    cursor: default;
+    content: "";
 }
 ```
 
@@ -159,20 +159,20 @@ Use meaningful or generic ID and class names.
 ```css
 /* Bad */
 #yee-1901 {
-  float: left;
+    float: left;
 }
 
 .button-green {
-  background: #060;
+    background: #060;
 }
 
 /* Good */
 #gallery {
-  float: left;
+    float: left;
 }
 
 .primary {
-  background: #060;
+    background: #060;
 }
 ```
 
@@ -181,20 +181,20 @@ Use ID and class names that are as short as possible but as long as necessary.
 ```css
 /* Bad */
 #navigation {
-  display: block;
+    display: block;
 }
 
 .atr {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 /* Good */
 #nav {
-  display: block;
+    display: block;
 }
 
 .author {
-  font-weight: bold;
+    font-weight: bold;
 }
 ```
 
@@ -203,20 +203,20 @@ Separate words in ID and class names with a hyphen.
 ```css
 /* Bad */
 .demoimage {
-  border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 
 .error_text {
-  color: #f00;
+    color: #f00;
 }
 
 /* Good */
 .demo-image {
-  border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 
 .error-text {
-  color: #f00;
+    color: #f00;
 }
 ```
 
@@ -225,20 +225,20 @@ Avoid qualifying ID and class names with type selectors.
 ```css
 /* Bad */
 ul#example {
-  list-style: none;
+    list-style: none;
 }
 
 div.error-block {
-  background: #fff0f0;
+    background: #fff0f0;
 }
 
 /* Good */
 #example {
-  list-style: none;
+    list-style: none;
 }
 
 .error-block {
-  background: #fff0f0;
+    background: #fff0f0;
 }
 ```
 
@@ -247,12 +247,12 @@ All code should be lowercase: This applies to element names, attributes, attribu
 ```css
 /* Bad */
 BODY {
-  margin: 0;
+    margin: 0;
 }
 
 /* Good */
 body {
-  margin: 0;
+    margin: 0;
 }
 ```
 
@@ -262,11 +262,11 @@ body {
 
 ```css
 /* ==========================================================================
-   Section comment block
-   ========================================================================== */
+     Section comment block
+     ========================================================================== */
 
 /* Sub-section comment block
-   ===================================== */
+     ===================================== */
 
 /**
  * This is a docBlock style comment
@@ -282,16 +282,16 @@ body {
 
 ```css
 /* ==========================================================================
-   Typography
-   ========================================================================== */
+     Typography
+     ========================================================================== */
 
 p {
-  margin: 0 0 20px;
-  font-size: 16px;
+    margin: 0 0 20px;
+    font-size: 16px;
 }
 
 /* Headings
-   ===================================== */
+     ===================================== */
 
 h1,
 h2,
@@ -299,10 +299,10 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 20px;
-  font-family: serif;
-  font-weight: bold;
-  text-rendering: optimizelegibility; /* Fix the character spacing for headings */
+    margin: 0 0 20px;
+    font-family: serif;
+    font-weight: bold;
+    text-rendering: optimizelegibility; /* Fix the character spacing for headings */
 }
 ```
 
