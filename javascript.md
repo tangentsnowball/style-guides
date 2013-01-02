@@ -72,8 +72,8 @@ When you know the length of an array use direct assignment over Array#push. [jsP
 
 ```javascript
 var len = items.length,
-        itemsCopy = [],
-        i;
+    itemsCopy = [],
+    i;
 
 // Bad
 for (i = 0; i < len; i++) {
@@ -236,8 +236,8 @@ var drangonball = 'z';
 
 // Good
 var items = getItems(),
-        goSportsTeam = true,
-        drangonball = 'z';
+    goSportsTeam = true,
+    drangonball = 'z';
 ```
 
 Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting related issues.
@@ -281,44 +281,6 @@ function() {
 ## <a name='conditional-evaluation'>Conditional Evaluation</a>
 
 Use `===` and `!==` over `==` and `!=`.
-Conditional expressions are evaluated using coercion with the `ToBoolean` method and always follow these simple rules:
-
-+ **Objects** evaluate to **true**
-+ **Undefined** evaluates to **false**
-+ **Null** evaluates to **false**
-+ **Booleans** evaluate to **the value of the boolean**
-+ **Numbers** evalute to **false** if **+0, -0, or NaN**, otherwise **true**
-+ **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
-
-```javascript
-// When evaluating that an array has length
-// Bad
-if (array.length > 0) ...
-
-// Good
-if (array.length) ...
-
-// When evaluating that an array is empty
-// Bad
-if (array.length === 0) ...
-
-// Good
-if (!array.length) ...
-
-// When evaluating that a string is not empty
-// Bad
-if (string !== '') ...
-
-// Good
-if (string) ...
-
-// When evaluating that a string is empty
-// Bad
-if (string === '') ...
-
-// Good
-if (!string) ...
-```
 
 **[[⬆]](#TOC)**
 
@@ -403,20 +365,20 @@ Place an empty newline at the end of the file.
 ```javascript
 // Bad
 var once
-    , upon
-    , aTime;
+  , upon
+  , aTime;
 
 // Good
 var once,
-        upon,
-        aTime;
+    upon,
+    aTime;
 
 // Bad
 var hero = {
-        firstName: 'Bob'
-    , lastName: 'Parr'
-    , heroName: 'Mr. Incredible'
-    , superPower: 'strength'
+    firstName: 'Bob'
+  , lastName: 'Parr'
+  , heroName: 'Mr. Incredible'
+  , superPower: 'strength'
 };
 
 // Good
@@ -506,17 +468,6 @@ function User(options) {
 var good = new User({
     name: 'yup'
 });
-```
-
-Use a leading underscore `_` when naming private properties.
-
-```javascript
-// Bad
-this.__firstName__ = 'Panda';
-this.firstName_ = 'Panda';
-
-// Good
-this._firstName = 'Panda';
 ```
 
 **[[⬆]](#TOC)**
