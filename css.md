@@ -268,7 +268,7 @@ body {
 /* Sub-section comment block
    ===================================== */
 
-/*
+/**
  * This is a docBlock style comment
  *
  * This is a longer description of the comment, describing the code in more
