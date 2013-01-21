@@ -42,14 +42,14 @@ Don't use [reserved words](https://developer.mozilla.org/en-US/docs/JavaScript/R
 // Bad
 var superman = {
     class: 'superhero',
-    default: { clark: kent },
+    default: { clark: 'kent' },
     private: true
 };
 
 // Good
 var superman = {
     klass: 'superman',
-    defaults: { clark: kent },
+    defaults: { clark: 'kent' },
     hidden: true
 };
 ```
@@ -68,22 +68,32 @@ var items = new Array();
 var items = [];
 ```
 
-When you know the length of an array use direct assignment over Array#push. [jsPerf](http://jsperf.com/array-direct-assignment-vs-push/11)
+If you don't know array length use Array#push.
 
 ```javascript
+var someStack = [];
+
+// Bad
+someStack[someStack.length] = 'abracadabra';
+
+// Good
+someStack.push('abracadabra');
+```
+
+When you need to copy an array use Array#slice.
+
+``` javascript
 var len = items.length,
     itemsCopy = [],
     i;
 
 // Bad
 for (i = 0; i < len; i++) {
-    itemsCopy.push(items[i])
+    itemsCopy[i] = items[i];
 }
 
 // Good
-for (i = 0; i < len; i++) {
-    itemsCopy[i] = items[i];
-}
+itemsCopy = Array.prototype.slice.call(items);
 ```
 
 **[[⬆]](#TOC)**
@@ -231,7 +241,7 @@ Use one `var` declaration for multiple variables and declare each variable on a 
 ```javascript
 // Bad
 var items = getItems();
-var goSportsteam = true;
+var goSportsTeam = true;
 var drangonball = 'z';
 
 // Good
@@ -281,6 +291,38 @@ function() {
 ## <a name='conditional-evaluation'>Conditional Evaluation</a>
 
 Use `===` and `!==` over `==` and `!=`.
+Conditional expressions are evaluated using coercion with the `ToBoolean` method and always follow these simple rules:
+
++ **Objects** evaluate to **true**
++ **Undefined** evaluates to **false**
++ **Null** evaluates to **false**
++ **Booleans** evaluate to **the value of the boolean**
++ **Numbers** evalute to **false** if **+0, -0, or NaN**, otherwise **true**
++ **Strings** evaluate to **false** if an empty string `''`, otherwise **true**
+
+Use shortcuts
+
+```javascript
+// Bad
+if (name !== '') {
+    // ...stuff...
+}
+
+// Good
+if (name) {
+    // ...stuff...
+}
+
+// Bad
+if (collection.length > 0) {
+    // ...stuff...
+}
+
+// Good
+if (collection.length) {
+    // ...stuff...
+}
+```
 
 **[[⬆]](#TOC)**
 
