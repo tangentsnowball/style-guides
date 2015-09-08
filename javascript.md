@@ -10,6 +10,7 @@
 1. [Functions](#functions)
 1. [Properties](#properties)
 1. [Variables](#variables)
+1. [Layout](#layout)
 1. [Conditional Evaluation](#conditional-evaluation)
 1. [Blocks](#blocks)
 1. [Whitespace](#whitespace)
@@ -285,6 +286,31 @@ function() {
     return name;
 }
 ```
+
+**[[⬆]](#TOC)**
+
+## <a name='layout'>Layout</a>
+
+All JavaScript written by both front and back end developers is laid out in the same pattern to ensure that it is easy to quickly identify the purpose of the file. A standard `.js` file should use the following format:
+
+```
+var tangent = window.tangent || {};
+    tangent.feedback = {
+        init: function() {
+            chameleon.feedback.setupSomeThing();
+        }
+
+        setupSometThing: function() {
+            // Set up the thing
+        }
+    }
+
+    $.ready(function() {
+        tangent.feedback.init();
+    });
+```
+The purpose here is two-fold. Firstly it places all non-private functions in the same scope, making them easy to access and secondly, because at a glance any developer can see what the purpose of the JS in the file is (as long as functions are properly names). It is also a neat layout and encourages consistently throughout.
+
 
 **[[⬆]](#TOC)**
 
