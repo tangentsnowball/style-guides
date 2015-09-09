@@ -293,7 +293,7 @@ function() {
 
 All JavaScript written by both front and back end developers is laid out in the same pattern to ensure that it is easy to quickly identify the purpose of the file. A standard `.js` file should use the following format:
 
-```
+```javascript
 var tangent = window.tangent || {};
     tangent.feedback = {
         init: function() {
